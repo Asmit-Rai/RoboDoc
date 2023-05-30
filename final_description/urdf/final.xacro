@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<robot name="final" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find final_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find final_description)/urdf/final.trans" />
+<xacro:include filename="$(find final_description)/urdf/final.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0 0.0 0.0125" rpy="0 0 0"/>
+    <mass value="7.859248063374004"/>
+    <inertia ixx="0.026683" iyy="0.026628" izz="0.052492" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_wheel_1">
+  <inertial>
+    <origin xyz="-3.5110803153770576e-15 0.006500000000000006 1.734723475976807e-18" rpy="0 0 0"/>
+    <mass value="0.14898293349149735"/>
+    <inertia ixx="2e-05" iyy="3.6e-05" izz="2e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075 0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075 0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rare_left_wheel_1">
+  <inertial>
+    <origin xyz="3.5110803153770576e-15 0.006500000000000006 0.0" rpy="0 0 0"/>
+    <mass value="0.14898293349149733"/>
+    <inertia ixx="2e-05" iyy="3.6e-05" izz="2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.075 0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/rare_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.075 0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/rare_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rare_right_wheel_1">
+  <inertial>
+    <origin xyz="3.5110803153770576e-15 -0.006500000000000006 1.734723475976807e-18" rpy="0 0 0"/>
+    <mass value="0.14898293349149735"/>
+    <inertia ixx="2e-05" iyy="3.6e-05" izz="2e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.075 -0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/rare_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.075 -0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/rare_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_wheel_1">
+  <inertial>
+    <origin xyz="-3.5110803153770576e-15 -0.006500000000000006 1.734723475976807e-18" rpy="0 0 0"/>
+    <mass value="0.14898293349149733"/>
+    <inertia ixx="2e-05" iyy="3.6e-05" izz="2e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075 -0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075 -0.115 -0.0125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="top_body_1">
+  <inertial>
+    <origin xyz="0.0011011412285528025 4.752046618823842e-06 0.14186126715929814" rpy="0 0 0"/>
+    <mass value="41.106007210046286"/>
+    <inertia ixx="0.389974" iyy="0.415364" izz="0.14107" ixy="-1.8e-05" iyz="-1.4e-05" ixz="-0.003323"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/top_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.025" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/top_body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="drawer_1">
+  <inertial>
+    <origin xyz="0.017243900233500503 0.0 0.0" rpy="0 0 0"/>
+    <mass value="0.5410320128930141"/>
+    <inertia ixx="0.000315" iyy="8.1e-05" izz="0.000341" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06 -0.0 -0.1975" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/drawer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06 -0.0 -0.1975" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://final_description/meshes/drawer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="front_left_wheel_joint" type="continuous">
+  <origin xyz="0.075 -0.115 0.0125" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_left_wheel_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="rare_left_wheel_joint" type="continuous">
+  <origin xyz="-0.075 -0.115 0.0125" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rare_left_wheel_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="rare_left_wheel_joint (1)" type="continuous">
+  <origin xyz="-0.075 0.115 0.0125" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rare_right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="front_right_wheel_joint" type="continuous">
+  <origin xyz="0.075 0.115 0.0125" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_right_wheel_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="top_body_rigid" type="fixed">
+  <origin xyz="0.0 0.0 0.025" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="top_body_1"/>
+</joint>
+
+<joint name="drawer_slide" type="prismatic">
+  <origin xyz="0.06 0.0 0.1725" rpy="0 0 0"/>
+  <parent link="top_body_1"/>
+  <child link="drawer_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit upper="0.03" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>
